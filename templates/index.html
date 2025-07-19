@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" action="/generate">
+    <label for="reddit_url">Enter Reddit Comment URL:</label>
+    <input type="url" name="reddit_url" placeholder="https://www.reddit.com/user/kojied/comments/" required style="width: 100%">
+    <button type="submit">Generate Persona</button>
+</form>
+
+{% if error %}
+    <p style="color:red;"><strong>{{ error }}</strong></p>
+{% endif %}
+{% endblock %}
